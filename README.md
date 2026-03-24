@@ -13,7 +13,7 @@ AI-assisted fiction writing usually breaks down after a few chapters:
 - continuity gets sloppy
 - revisions lose the original intent
 
-This repo gives Claude a tighter workflow for long-form fiction. It does not replace authorship. It gives the model a disciplined way to read your canon, operate on a chapter, and stay inside the story you are already building.
+This repo gives Agents a tighter workflow for long-form fiction. It does not replace authorship. It gives the model a disciplined way to read your canon, operate on a chapter, and stay inside the story you are already building.
 
 ## What’s Included
 
@@ -29,21 +29,8 @@ claude-fiction-skills/
 
 ## Install
 
-Project-local install:
-
-```bash
-mkdir -p .claude/skills
-cp -R /path/to/claude-fiction-skills/.claude/skills/fiction-workbench .claude/skills/
-```
-
-Personal install:
-
-```bash
-mkdir -p ~/.claude/skills
-cp -R /path/to/claude-fiction-skills/.claude/skills/fiction-workbench ~/.claude/skills/
-```
-
-Then start a new Claude Code session, or reload the current one so the skill is discovered.
+We recommend using [skills](https://skills.sh)
+`npx skills add https://github.com/0plus1/fiction-workbench --skill fiction-workbench`
 
 ## Usage
 
@@ -69,10 +56,6 @@ The skill is opinionated about project structure. It works best when your fictio
 
 ```text
 your-novel/
-├── .claude/
-│   └── skills/
-│       └── fiction-workbench/
-│           └── SKILL.md
 ├── bible/
 │   ├── characters/
 │   │   ├── marco.md
@@ -95,11 +78,13 @@ your-novel/
 
 The skill assumes this structure by default. It reads the target chapter, then consults the relevant files under `bible/` before drafting, editing, critiquing, or sealing.
 
+We recommend using [murmur](https://github.com/0plus1/murmur) as the editor for your novel.
+
 ## How It Behaves
 
-`/fiction-workbench` is deliberately manual. It uses `disable-model-invocation: true`, so Claude should not auto-trigger it behind your back.
+`/fiction-workbench` is deliberately manual. It uses `disable-model-invocation: true`.
 
-The skill tells Claude to:
+The skill tells agents to:
 
 - read the target chapter first
 - inspect the `bible/` files and folders
@@ -120,7 +105,7 @@ The author still owns:
 - taste
 - final language
 
-Claude’s role here is narrower:
+Agents' role here is narrower:
 
 - reduce drift
 - keep continuity in view
@@ -130,8 +115,5 @@ That is the point of the repo.
 
 ## Customising
 
-If your project uses different folder names, edit [`SKILL.md`](.claude/skills/fiction-workbench/SKILL.md) directly. Keep the skill procedural. Put story-specific canon in your own project, not inside the public skill repo.
+If your project uses different folder names, edit [`SKILL.md`](skills/fiction-workbench/SKILL.md) directly. Keep the skill procedural. Put story-specific canon in your own project, not inside the public skill repo.
 
-## License
-
-MIT.
