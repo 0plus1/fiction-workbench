@@ -1,0 +1,4 @@
+interface:
+  display_name: "Fiction Workbench"
+  short_description: "Canon-aware drafting, editing, and critique"
+  default_prompt: "Use $fiction-workbench to critique manuscript/chapters/chapter-12.md against the project bible."
