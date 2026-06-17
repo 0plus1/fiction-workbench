@@ -2,7 +2,11 @@
 
 LLM agent skills for long-form fiction writing.
 
-This repo is intentionally small. It ships one skill, [`/fiction-workbench`](.claude/skills/fiction-workbench/SKILL.md), designed to work with a simple fiction-project layout built around a `bible/` directory and a `manuscript/chapters/` directory.
+This repo is intentionally small. It ships one skill:
+
+- [`/fiction-workbench`](skills/fiction-workbench/SKILL.md) for drafting, comment-driven rewriting, editing, critique, anti-slop cleanup, and sealing
+
+It is designed to work with a simple fiction-project layout built around a `bible/` directory and a `manuscript/chapters/` directory.
 
 ## Why This Exists
 
@@ -21,16 +25,23 @@ This repo gives Agents a tighter workflow for long-form fiction. It does not rep
 claude-fiction-skills/
 ├── README.md
 ├── LICENSE
-└── .claude/
-    └── skills/
-        └── fiction-workbench/
-            └── SKILL.md
+└── skills/
+    └── fiction-workbench/
+        ├── SKILL.md
+        ├── agents/
+        │   └── openai.yaml
+        └── references/
+            ├── forbidden_patterns.md
+            └── style_guide.md
 ```
 
 ## Install
 
-We recommend using [skills](https://skills.sh)
-`npx skills add https://github.com/0plus1/fiction-workbench --skill fiction-workbench`
+We recommend using [skills](https://skills.sh):
+
+```bash
+npx skills add https://github.com/0plus1/fiction-workbench --skill fiction-workbench
+```
 
 ## Usage
 
@@ -38,6 +49,7 @@ Invoke the skill manually:
 
 ```text
 /fiction-workbench write manuscript/chapters/chapter-1.md
+/fiction-workbench write-comments manuscript/chapters/chapter-1-comments.md
 /fiction-workbench edit manuscript/chapters/chapter-1.md
 /fiction-workbench critique manuscript/chapters/chapter-1.md
 /fiction-workbench seal manuscript/chapters/chapter-1.md
@@ -46,9 +58,29 @@ Invoke the skill manually:
 ### Modes
 
 - `write`: draft, expand, or rewrite a chapter while preserving canon and voice
+- `write-comments`: apply marked inline rewrite comments while preserving canon and voice
 - `edit`: improve prose at the line level without changing story intent
 - `critique`: give literary feedback without rewriting
 - `seal`: produce a concise chapter summary, continuity notes, motifs, and open threads
+
+### Comment-Driven Write Mode
+
+Use `/fiction-workbench write-comments` when you have an annotated draft with marked spans and a matching comment list. The expected pattern is:
+
+```text
+Some unchanged text.
+
+<<C1 START>>
+This paragraph needs to change.
+<<C1 END>>
+
+More draft text.
+
+### COMMENTS
+[C1] Make this less explicit and add more sensory detail.
+```
+
+The skill rewrites the marked sections using the matching comments, keeps the rest aligned with the existing voice, and returns the cleaned draft without the markers or comments section.
 
 ## Expected Project Shape
 
@@ -92,7 +124,7 @@ The skill tells agents to:
 - avoid inventing lore or symbolic systems that are not supported by the text
 - keep the human in charge of taste, structure, and final judgment
 
-For `write` and `edit`, the skill is intended to revise the target chapter. For `critique` and `seal`, it should return notes unless you explicitly ask Claude to write those notes into project files.
+For `write`, `write-comments`, and `edit`, the skill is intended to revise the target chapter. For `critique` and `seal`, it should return notes unless you explicitly ask Claude to write those notes into project files.
 
 ## Philosophy
 
@@ -115,5 +147,8 @@ That is the point of the repo.
 
 ## Customising
 
-If your project uses different folder names, edit [`SKILL.md`](skills/fiction-workbench/SKILL.md) directly. Keep the skill procedural. Put story-specific canon in your own project, not inside the public skill repo.
+If your project uses different folder names or want different rewrite rules, edit the skill files directly:
 
+- [`skills/fiction-workbench/SKILL.md`](skills/fiction-workbench/SKILL.md)
+
+Keep the skills procedural. Put story-specific canon in your own project, not inside the public skill repo.

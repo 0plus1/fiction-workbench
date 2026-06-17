@@ -1,7 +1,7 @@
 ---
 name: fiction-workbench
-description: Canon-aware drafting, line editing, critique, and continuity sealing for long-form fiction projects organized around chapter files plus a story bible. Use when working on a specific scene or chapter and needing to preserve voice, chronology, character integrity, motifs, and narrative direction.
-argument-hint: <write|edit|critique|seal> <chapter-file>
+description: Canon-aware drafting, comment-driven rewriting, line editing, critique, anti-slop cleanup, and continuity sealing for long-form fiction projects organized around chapter files plus a story bible. Use when working on a specific scene or chapter and needing to preserve voice, chronology, character integrity, motifs, narrative direction, apply inline rewrite comments, or remove generic AI-shaped prose tells.
+argument-hint: <write|write-comments|edit|critique|seal> <chapter-file>
 disable-model-invocation: true
 ---
 
@@ -13,12 +13,15 @@ Parse the invocation arguments like this:
 - Target chapter or scene file: `$1`
 
 If either is missing, ask one short clarifying question and stop.
-If the mode is not `write`, `edit`, `critique`, or `seal`, explain the valid modes briefly and stop.
+If the mode is not `write`, `write-comments`, `edit`, `critique`, or `seal`, explain the valid modes briefly and stop.
 
 ## Workflow
 
 1. Read the target file first.
-2. Use this project structure when the files exist:
+2. For `write`, `write-comments`, `edit`, or `critique`, read the bundled anti-slop references when available:
+   - `references/style_guide.md`
+   - `references/forbidden_patterns.md`
+3. Use this project structure when the files exist:
    - `bible/characters/`
    - `bible/locations/`
    - `bible/themes/`
@@ -26,10 +29,11 @@ If the mode is not `write`, `edit`, `critique`, or `seal`, explain the valid mod
    - `bible/style-guide.md`
    - `bible/narrative-spine.md`
    - `manuscript/chapters/`
-3. Read `bible/style-guide.md`, `bible/narrative-spine.md`, and `bible/emotional-arc.md` when they exist.
-4. Read only the character, location, and theme files that are clearly relevant to the target chapter or scene.
-5. Read adjacent chapter files only when continuity, chronology, or payoff depends on them.
-6. Work from the text that exists. Do not invent canon, backstory, or symbolism that the files do not support.
+4. Read `bible/style-guide.md`, `bible/narrative-spine.md`, and `bible/emotional-arc.md` when they exist.
+5. Treat `bible/style-guide.md` as project-specific authority over the bundled anti-slop defaults.
+6. Read only the character, location, and theme files that are clearly relevant to the target chapter or scene.
+7. Read adjacent chapter files only when continuity, chronology, or payoff depends on them.
+8. Work from the text that exists. Do not invent canon, backstory, or symbolism that the files do not support.
 
 ## Global Rules
 
@@ -38,6 +42,7 @@ If the mode is not `write`, `edit`, `critique`, or `seal`, explain the valid mod
 - Preserve point of view, tense, and markdown structure unless the user asks for a change.
 - Prefer concrete, grounded prose over abstract explanation.
 - Remove generic AI phrasing, theatrical dialogue, and empty literary flourish.
+- Apply the bundled style guide and forbidden-pattern checks conservatively; density and recurrence matter more than isolated accidents.
 - Do not introduce new lore, backstory, motifs, or symbolic systems unless the source material supports them.
 - Do not flatten deliberate ambiguity or overexplain subtext.
 - Prefer the smallest amount of canon lookup needed to do the job well.
@@ -51,12 +56,35 @@ Use this mode to draft, expand, or rewrite the target chapter or scene.
 - Preserve the intended events, relationships, and emotional direction unless the user asks for structural changes.
 - Strengthen pacing, scene grounding, and sensory specificity.
 - Resolve local awkwardness, but do not quietly change story logic or scene outcomes.
+- Do a final anti-slop pass for repeated rhetorical scaffolds, generic suspense, staged fragments, and narrator intrusions.
 - End with forward movement or meaningful narrative pressure.
 - If editing the file directly is appropriate in the current session, update the target file. Otherwise return the revised draft only.
 
 Output:
 
 - Revised draft only, unless the user explicitly asks for commentary.
+
+## Mode: `write-comments`
+
+Use this mode when the target is an annotated fiction draft with marked spans and a matching `### COMMENTS` section. Treat it as a targeted `write` pass driven by explicit local instructions.
+
+- Confirm that the target draft uses marked spans in this form:
+  - `<<C1 START>> ... <<C1 END>>`
+  - matching entries in a `### COMMENTS` section such as `[C1] ...`
+- Verify that every marked span has exactly one matching comment entry and that there are no orphaned comment IDs.
+- If the format is broken or the IDs do not match one-to-one, explain the mismatch briefly and stop.
+- Use each comment entry as the rewrite instruction for its matching marked span.
+- Preserve story intent, continuity, and key plot beats unless a comment explicitly asks for a change.
+- Preserve point of view, tense, chronology, and markdown structure unless a comment explicitly requires a local change.
+- Improve prose clarity, subtext, sensory detail, rhythm, and anti-slop cleanliness where appropriate.
+- Keep unmarked sections aligned with the existing voice. Do not rewrite them broadly just because nearby text changes.
+- Expand beyond the marked span only when a comment clearly requires a small local bridge for coherence.
+- Remove the marker tags from the final output.
+- Do not include the `### COMMENTS` section in the final output.
+
+Output:
+
+- Rewritten draft only, unless the user explicitly asks for notes.
 
 ## Mode: `edit`
 
@@ -66,6 +94,7 @@ Use this mode for line-level refinement without changing story intent.
 - Cut repetition, stiffness, and overwritten phrasing.
 - Preserve meaning, scene order, and voice.
 - Avoid adding new beats, new lore, or new motivations.
+- Remove forbidden patterns and bad cadence habits without replacing them with equally canned phrasing.
 - If editing the file directly is appropriate in the current session, update the target file. Otherwise return the edited text only.
 
 Output:
@@ -81,7 +110,7 @@ Use this mode for literary and structural feedback only.
 - Evaluate character integrity.
 - Evaluate pacing and scene balance.
 - Evaluate thematic alignment with `bible/narrative-spine.md`.
-- Identify canon drift, false notes, artificial phrasing, and missed grounding opportunities.
+- Identify canon drift, false notes, artificial phrasing, forbidden patterns, and missed grounding opportunities.
 - Cite concrete problem spots when possible.
 - Be specific and direct.
 
