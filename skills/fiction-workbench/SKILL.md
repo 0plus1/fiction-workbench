@@ -1,7 +1,7 @@
 ---
 name: fiction-workbench
-description: Canon-aware drafting, comment-driven rewriting, line editing, critique, anti-slop cleanup, and continuity sealing for long-form fiction projects organized around chapter files plus a story bible. Use when working on a specific scene or chapter and needing to preserve voice, chronology, character integrity, motifs, narrative direction, apply inline rewrite comments, or remove generic AI-shaped prose tells.
-argument-hint: <write|write-comments|edit|critique|seal> <chapter-file>
+description: Canon-aware drafting, comment-driven rewriting, deterministic linting, line editing, critique, anti-slop cleanup, and continuity sealing for long-form fiction projects organized around chapter files plus a story bible. Use when working on a specific scene or chapter and needing to preserve voice, chronology, character integrity, motifs, narrative direction, apply inline rewrite comments, lint for prose tells, or remove generic AI-shaped prose.
+argument-hint: <write|write-comments|lint|edit|critique|seal> <chapter-file>
 disable-model-invocation: true
 ---
 
@@ -13,14 +13,15 @@ Parse the invocation arguments like this:
 - Target chapter or scene file: `$1`
 
 If either is missing, ask one short clarifying question and stop.
-If the mode is not `write`, `write-comments`, `edit`, `critique`, or `seal`, explain the valid modes briefly and stop.
+If the mode is not `write`, `write-comments`, `lint`, `edit`, `critique`, or `seal`, explain the valid modes briefly and stop.
 
 ## Workflow
 
 1. Read the target file first.
-2. For `write`, `write-comments`, `edit`, or `critique`, read the bundled anti-slop references when available:
+2. For `write`, `write-comments`, `lint`, `edit`, or `critique`, read the bundled anti-slop references when available:
    - `references/style_guide.md`
    - `references/forbidden_patterns.md`
+   - `references/lint_layers.md`
 3. Use this project structure when the files exist:
    - `bible/characters/`
    - `bible/locations/`
@@ -46,6 +47,7 @@ If the mode is not `write`, `write-comments`, `edit`, `critique`, or `seal`, exp
 - Do not introduce new lore, backstory, motifs, or symbolic systems unless the source material supports them.
 - Do not flatten deliberate ambiguity or overexplain subtext.
 - Prefer the smallest amount of canon lookup needed to do the job well.
+- Do not overload the prose generation prompt with every lint rule. Draft or revise for the scene first, then run deterministic lint as a separate catch pass.
 - Keep output aligned with the mode requested.
 
 ## Mode: `write`
@@ -85,6 +87,24 @@ Use this mode when the target is an annotated fiction draft with marked spans an
 Output:
 
 - Rewritten draft only, unless the user explicitly asks for notes.
+
+## Mode: `lint`
+
+Use this mode to catch anti-slop and style issues without rewriting.
+
+- Run Layer 1 and Layer 2 checks from `references/lint_layers.md` first.
+- Report only high-confidence matches with rule ID, line number, matched text, and suggested fix direction.
+- Treat caps as signals, not proof. Flag clusters and overuse before isolated punctuation.
+- Do not rewrite the chapter unless the user explicitly asks for a fix pass.
+- If Layer 1 and Layer 2 are stable and the user asks for deeper review, run Layer 3 as separate lenses: style, character, plot, and continuity.
+- Keep each semantic lens focused on one chapter and its relevant bible files.
+
+Output headings:
+
+- `Surface lint`
+- `Structural lint`
+- `Semantic review candidates`
+- `Highest-value fixes`
 
 ## Mode: `edit`
 

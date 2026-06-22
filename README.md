@@ -50,6 +50,7 @@ Invoke the skill manually:
 ```text
 /fiction-workbench write manuscript/chapters/chapter-1.md
 /fiction-workbench write-comments manuscript/chapters/chapter-1-comments.md
+/fiction-workbench lint manuscript/chapters/chapter-1.md
 /fiction-workbench edit manuscript/chapters/chapter-1.md
 /fiction-workbench critique manuscript/chapters/chapter-1.md
 /fiction-workbench seal manuscript/chapters/chapter-1.md
@@ -59,6 +60,7 @@ Invoke the skill manually:
 
 - `write`: draft, expand, or rewrite a chapter while preserving canon and voice
 - `write-comments`: apply marked inline rewrite comments while preserving canon and voice
+- `lint`: report surface and structural prose tells without rewriting
 - `edit`: improve prose at the line level without changing story intent
 - `critique`: give literary feedback without rewriting
 - `seal`: produce a concise chapter summary, continuity notes, motifs, and open threads
@@ -81,6 +83,10 @@ More draft text.
 ```
 
 The skill rewrites the marked sections using the matching comments, keeps the rest aligned with the existing voice, and returns the cleaned draft without the markers or comments section.
+
+### Lint Mode
+
+Use `/fiction-workbench lint` as a separate pass after drafting or editing. It checks surface patterns first, then structural AI-tell shapes, and only escalates to semantic review candidates when deterministic findings are stable enough to make that useful.
 
 ## Expected Project Shape
 
@@ -124,7 +130,7 @@ The skill tells agents to:
 - avoid inventing lore or symbolic systems that are not supported by the text
 - keep the human in charge of taste, structure, and final judgment
 
-For `write`, `write-comments`, and `edit`, the skill is intended to revise the target chapter. For `critique` and `seal`, it should return notes unless you explicitly ask Claude to write those notes into project files.
+For `write`, `write-comments`, and `edit`, the skill is intended to revise the target chapter. For `lint`, `critique`, and `seal`, it should return notes unless you explicitly ask Claude to write those notes into project files.
 
 ## Philosophy
 

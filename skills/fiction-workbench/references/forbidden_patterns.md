@@ -18,6 +18,9 @@ Treat these as default bans for new or revised prose unless the project bible, e
 - No `seemed to` when the point-of-view character can observe the action directly.
 - No `as if` similes that explain emotion instead of revealing it through image or behavior.
 - No ending paragraphs with a portentous abstract noun such as `silence`, `darkness`, `truth`, `memory`, or `home` unless the manuscript has earned that exact beat.
+- No vague `quality of` phrasing when the prose can name the property, action, angle, texture, or pressure.
+- No lazy placeholder `something` when a concrete noun, verb, image, or claim is available.
+- No narrator nudge that tells the reader a point is `worth noting`, `worth pausing on`, `worth holding onto`, `striking`, or `bears repeating`.
 
 ## Rhetorical Structures To Remove
 
@@ -31,10 +34,21 @@ Treat these as default bans for new or revised prose unless the project bible, e
 - `It should have been X. Instead, it was Y.`
 - `She had expected X. She had not expected Y.`
 - `He wanted to say X. Instead, he said Y.` when used repeatedly as a default dialogue beat.
+- `a quality of X`
+- `the quality of X`
+- `a particular quality`
+- `doing something that...`
+- `It is something more...`
+- `That gap is worth holding onto`
+- `It is worth noting that...`
+- `What is striking here is...`
 
 ## Fiction-Specific AI Tells
 
 - Generic sensory inflation: `the air felt thick`, `the silence stretched`, `the room seemed to shrink`.
+- Vague-noun filler: `quality`, `presence`, `energy`, or `texture` used to gesture at precision without naming it.
+- Placeholder abstraction: repeated `something` where the sentence has dropped the actual object or action.
+- Reader-directed importance cues: editorial verbs that announce importance instead of making the sentence earn it.
 - Emotional label stacking: `fear and anger and grief` where a single precise reaction would do.
 - Trailer cadence: short fragment paragraphs that announce importance without adding action.
 - Overexplained subtext: narration interpreting a gesture immediately after showing it.
@@ -49,3 +63,6 @@ Treat these as default bans for new or revised prose unless the project bible, e
 - Let a line of dialogue fail, deflect, or collide instead of explaining the emotion.
 - Replace the reveal scaffold with one specific observation.
 - Use a normal paragraph break instead of a fragment when the sentence only performs drama.
+- Replace `quality of` with the specific property or a verb.
+- Replace lazy `something` with the concrete noun, claim, or action.
+- Delete `worth noting` frames and state the point directly.

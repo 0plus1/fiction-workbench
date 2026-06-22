@@ -42,6 +42,9 @@ Apply these rules conservatively. One odd sentence is usually just texture. A cl
 - Rule-of-three lyricism: three adjectives, three images, or three clauses arranged for canned grandeur.
 - Theatrical contrast: `not because X, but because Y` repeated as a default mode of insight.
 - Explainer narration: the prose tells the reader what the scene means instead of letting the scene exert pressure.
+- Vague-noun filler: `quality`, `presence`, `energy`, or `texture` used when the sentence should name the property or action.
+- Placeholder vagueness: `something` used because the prose has not chosen the concrete noun, verb, image, or claim.
+- Reader-attention nudges: `worth noting`, `worth pausing on`, `worth holding onto`, `this bears repeating`, or `what is striking here` used to tell the reader what should matter.
 - Generic cinematic beats: hearts hammering, breaths catching, blood running cold, silence stretching, time slowing, rooms holding their breath.
 - Over-clean dialogue: characters explain exactly what they feel, want, fear, or symbolize.
 
@@ -49,6 +52,6 @@ Apply these rules conservatively. One odd sentence is usually just texture. A cl
 
 1. Preserve canon, point of view, tense, and story intent.
 2. Remove repeated rhetorical scaffolds and forbidden patterns.
-3. Replace abstract emotional labels with concrete action, perception, or implication.
+3. Replace abstract emotional labels, vague `quality` phrasing, and lazy `something` placeholders with concrete action, perception, or implication.
 4. Vary sentence and paragraph rhythm where repetition creates artificial emphasis.
 5. Cut exposition, summary, or interior repetition that does not change the scene.
