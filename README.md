@@ -43,6 +43,12 @@ We recommend using [skills](https://skills.sh):
 npx skills add https://github.com/0plus1/fiction-workbench --skill fiction-workbench
 ```
 
+update
+
+```bash
+npx skills update
+```
+
 ## Usage
 
 Invoke the skill manually:
