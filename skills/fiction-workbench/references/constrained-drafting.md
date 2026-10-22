@@ -10,12 +10,14 @@ This skill supplies a draft/check/rewrite loop at passage scale. It does not acc
 
 ## Choose a scoped profile
 
-Use an author-supplied list when available. Otherwise, for a requested experiment, start with [the trial profile](constraint-profile.json): a small, provisional selection from the author's supplied repetition list. Say that it is a trial selection, not an approved permanent blacklist. Do not expand it to thousands of words or import someone else's corpus wholesale. Preserve the author's ability to change or remove constraints.
+Use an author-supplied list when available. Otherwise use [the bundled cross-model profile](constraint-profile.json) for requested constrained drafting. Its hard bans are generated from EQBench Creative Writing v3 entries listed by at least 10% of models within any one category: words, phrases, bigrams or trigrams. Each model contributes one vote per entry, regardless of its output length or reported occurrence count. The profile records its source snapshot, selection threshold and category evidence. The repository's root-level `generate_constraint_profile.py` rebuilds it from downloaded profiles; the generator is development tooling, not part of this installed skill. Preserve the author's ability to change or remove constraints.
 
 - `hard`: literal words/phrases excluded from the generated prose under this profile. A match requires another attempt; do not silently waive it because the sentence seems good.
 - `review`: literal words/phrases worth inspecting. Keep an occurrence that earns its place; otherwise retry the passage. These are not forbidden and have no numerical weight.
 
 Names, necessary technical terms, the book's recurring objects, ordinary speech tags and quoted source material should not accidentally become collateral bans. Check the profile against the intended scene before drafting. If an explicit author ban conflicts with a required fact or quotation, state the conflict rather than deleting the fact or pretending the ban was met. Apply checking only to the authorised generated span; extract it to a temporary file when the surrounding chapter contains approved text.
+
+The generated profile uses literal EQBench entries, including names, ordinary words and n-grams that may omit connecting words. It does not infer missing words or grammatical variants. Case and apostrophe variants are merged; punctuation remains. Metadata is evidence, not an extra set of constraints. Every `hard` entry is enforced when the profile is active; `review` is empty in the generated profile. Ordinary drafting still uses the contextual watchlist.
 
 ## Draft, check, reconsider
 

@@ -1,17 +1,1563 @@
 {
-  "name": "fiction-constraint-trial",
+  "name": "eqbench-cross-model-slop",
   "hard": [
-    "reliquary",
     "flickered",
-    "trembled",
-    "could not decide whether",
-    "stood close enough"
-  ],
-  "review": [
-    "glanced",
+    "gestured",
+    "murmured",
+    "hummed",
+    "flickering",
+    "leaned",
+    "hissed",
+    "flickers",
+    "blinked",
+    "says voice",
+    "flicker",
+    "muttered",
+    "addendum",
+    "grinned",
+    "last week",
     "nodded",
-    "tightened",
-    "smiled without",
-    "close enough to smell"
-  ]
+    "said voice low",
+    "buzzes",
+    "flinch",
+    "faintly",
+    "tightens",
+    "unreadable",
+    "one hand",
+    "voice barely whisper",
+    "tilts",
+    "grunted",
+    "like something",
+    "gon na",
+    "obsidian",
+    "glowed",
+    "hums",
+    "murmurs",
+    "elara",
+    "kael",
+    "glinting",
+    "something else something",
+    "voice dropping",
+    "whispered",
+    "air thick",
+    "like someone",
+    "glint",
+    "smells like",
+    "twitched",
+    "glanced",
+    "gloved",
+    "hesitated",
+    "containment",
+    "tilts head",
+    "creaked",
+    "feels like",
+    "said nothing",
+    "groaned",
+    "sternum",
+    "air thick scent",
+    "say voice",
+    "exhaled",
+    "gaze",
+    "grins",
+    "something else entirely",
+    "voss",
+    "got ta",
+    "one last time",
+    "like man",
+    "one thing",
+    "rasp",
+    "something else, something",
+    "took a deep breath",
+    "voice barely",
+    "crackled",
+    "leans",
+    "took deep breath",
+    "trembling",
+    "exhales",
+    "last night",
+    "smile playing lips",
+    "voice barely a whisper",
+    "barely whisper",
+    "clutched",
+    "scavenged",
+    "snorts",
+    "voice barely above a whisper",
+    "cobblestones",
+    "thick scent",
+    "trembled",
+    "cloying",
+    "flinched",
+    "forearm",
+    "heart hammering ribs",
+    "reach eyes",
+    "said, his voice low",
+    "smirks",
+    "viewport",
+    "voice barely audible",
+    "air was thick with the scent",
+    "casting long",
+    "coiling",
+    "hisses",
+    "take a deep breath",
+    "cacophony",
+    "calloused",
+    "heart hammering",
+    "memetic",
+    "smelled",
+    "take deep breath",
+    "says voice low",
+    "crackles",
+    "flagstones",
+    "metallic tang",
+    "phone buzzes",
+    "shadows across",
+    "stammered",
+    "thrum",
+    "vibrated",
+    "chuckled",
+    "coiled",
+    "gesturing",
+    "glances",
+    "heart hammered ribs",
+    "hesitates",
+    "rusted",
+    "said voice barely",
+    "shimmered",
+    "smudge",
+    "stared",
+    "eyes never leaving",
+    "flicker something",
+    "mutters",
+    "paused",
+    "steps closer",
+    "unease",
+    "close enough smell",
+    "gleamed",
+    "playing lips",
+    "someone else",
+    "voice low",
+    "aris",
+    "casting long shadows",
+    "close enough could",
+    "couldn't shake the feeling",
+    "everyone else",
+    "first time since",
+    "rasped",
+    "clatter",
+    "could shake feeling",
+    "fingers brushing",
+    "lunged",
+    "said something",
+    "said voice steady",
+    "sighed",
+    "smile playing on his lips",
+    "stillness",
+    "voice steady",
+    "bioluminescent",
+    "expression unreadable",
+    "flicked",
+    "foghorn",
+    "internal monologue",
+    "one one",
+    "shake feeling",
+    "smirked",
+    "stark contrast",
+    "eyebrow",
+    "eyes narrow",
+    "eyes scanning",
+    "forearms",
+    "hammering ribs",
+    "kaelen",
+    "left foot",
+    "like a physical blow",
+    "right foot",
+    "smile reach eyes",
+    "voice steady despite",
+    "close enough see",
+    "darting",
+    "first time in a long",
+    "mara",
+    "right arm",
+    "said voice dropping",
+    "said, his voice dropping",
+    "shiver",
+    "slow deliberate",
+    "spreading across face",
+    "squinted",
+    "tremor",
+    "unhurried",
+    "ached",
+    "clinking",
+    "heart hammering against her ribs",
+    "like a trapped bird",
+    "like trapped bird",
+    "prickle",
+    "said, her voice low",
+    "said, his voice a low",
+    "smile playing on her lips",
+    "vane",
+    "anomalous",
+    "conspiratorial",
+    "gleaming",
+    "heart pounding chest",
+    "humming",
+    "last month",
+    "like dying",
+    "lingered",
+    "priya",
+    "pulsed",
+    "ribs like a trapped",
+    "ribs like trapped",
+    "shelving",
+    "snorted",
+    "terran",
+    "voice dropping an octave",
+    "voice low rumble"
+  ],
+  "review": [],
+  "metadata": {
+    "generator": "generate_constraint_profile.py",
+    "source": {
+      "page_url": "https://eqbench.com/creative_writing.html",
+      "data_url": "https://eqbench.com/creative_writing.js?v=1.0.91",
+      "resolved_data_url": "https://eqbench.com/creative_writing.js?v=1.0.91",
+      "retrieved_at": "2026-10-22T23:00:04.200922+00:00",
+      "data_sha256": "722ddb132e8d3a5e5c39b8d445f8475f3f7e24893a007260c6f3e3cce5c1ee18"
+    },
+    "input_profiles_sha256": "1f865dc4bef471af8109c7cd6e64209befeee5466c5d3513f4b4893ef9d8c6dd",
+    "model_count": 140,
+    "selection": {
+      "min_model_fraction": 0.1,
+      "min_model_count": 14,
+      "rule": "Include entries meeting the threshold in any one source category.",
+      "ranking": "Distinct model count descending, then text alphabetically; each model has equal weight.",
+      "normalization": "Casefold, convert curly apostrophes to straight, collapse whitespace; preserve punctuation and n-gram wording.",
+      "deduplication": "One vote per model per entry; merge selected entries across categories into hard."
+    },
+    "hard_entry_count": 212,
+    "categories": {
+      "top_repetitive_words": [
+        {
+          "text": "flickered",
+          "model_count": 139,
+          "model_fraction": 0.992857,
+          "reported_count_total": null
+        },
+        {
+          "text": "gestured",
+          "model_count": 99,
+          "model_fraction": 0.707143,
+          "reported_count_total": null
+        },
+        {
+          "text": "murmured",
+          "model_count": 96,
+          "model_fraction": 0.685714,
+          "reported_count_total": null
+        },
+        {
+          "text": "hummed",
+          "model_count": 90,
+          "model_fraction": 0.642857,
+          "reported_count_total": null
+        },
+        {
+          "text": "flickering",
+          "model_count": 86,
+          "model_fraction": 0.614286,
+          "reported_count_total": null
+        },
+        {
+          "text": "leaned",
+          "model_count": 84,
+          "model_fraction": 0.6,
+          "reported_count_total": null
+        },
+        {
+          "text": "hissed",
+          "model_count": 83,
+          "model_fraction": 0.592857,
+          "reported_count_total": null
+        },
+        {
+          "text": "flickers",
+          "model_count": 79,
+          "model_fraction": 0.564286,
+          "reported_count_total": null
+        },
+        {
+          "text": "blinked",
+          "model_count": 77,
+          "model_fraction": 0.55,
+          "reported_count_total": null
+        },
+        {
+          "text": "flicker",
+          "model_count": 67,
+          "model_fraction": 0.478571,
+          "reported_count_total": null
+        },
+        {
+          "text": "muttered",
+          "model_count": 67,
+          "model_fraction": 0.478571,
+          "reported_count_total": null
+        },
+        {
+          "text": "addendum",
+          "model_count": 66,
+          "model_fraction": 0.471429,
+          "reported_count_total": null
+        },
+        {
+          "text": "grinned",
+          "model_count": 65,
+          "model_fraction": 0.464286,
+          "reported_count_total": null
+        },
+        {
+          "text": "nodded",
+          "model_count": 62,
+          "model_fraction": 0.442857,
+          "reported_count_total": null
+        },
+        {
+          "text": "buzzes",
+          "model_count": 59,
+          "model_fraction": 0.421429,
+          "reported_count_total": null
+        },
+        {
+          "text": "flinch",
+          "model_count": 58,
+          "model_fraction": 0.414286,
+          "reported_count_total": null
+        },
+        {
+          "text": "faintly",
+          "model_count": 57,
+          "model_fraction": 0.407143,
+          "reported_count_total": null
+        },
+        {
+          "text": "tightens",
+          "model_count": 57,
+          "model_fraction": 0.407143,
+          "reported_count_total": null
+        },
+        {
+          "text": "unreadable",
+          "model_count": 57,
+          "model_fraction": 0.407143,
+          "reported_count_total": null
+        },
+        {
+          "text": "tilts",
+          "model_count": 52,
+          "model_fraction": 0.371429,
+          "reported_count_total": null
+        },
+        {
+          "text": "grunted",
+          "model_count": 51,
+          "model_fraction": 0.364286,
+          "reported_count_total": null
+        },
+        {
+          "text": "obsidian",
+          "model_count": 49,
+          "model_fraction": 0.35,
+          "reported_count_total": null
+        },
+        {
+          "text": "glowed",
+          "model_count": 48,
+          "model_fraction": 0.342857,
+          "reported_count_total": null
+        },
+        {
+          "text": "hums",
+          "model_count": 47,
+          "model_fraction": 0.335714,
+          "reported_count_total": null
+        },
+        {
+          "text": "murmurs",
+          "model_count": 47,
+          "model_fraction": 0.335714,
+          "reported_count_total": null
+        },
+        {
+          "text": "elara",
+          "model_count": 46,
+          "model_fraction": 0.328571,
+          "reported_count_total": null
+        },
+        {
+          "text": "kael",
+          "model_count": 46,
+          "model_fraction": 0.328571,
+          "reported_count_total": null
+        },
+        {
+          "text": "glinting",
+          "model_count": 45,
+          "model_fraction": 0.321429,
+          "reported_count_total": null
+        },
+        {
+          "text": "whispered",
+          "model_count": 45,
+          "model_fraction": 0.321429,
+          "reported_count_total": null
+        },
+        {
+          "text": "glint",
+          "model_count": 43,
+          "model_fraction": 0.307143,
+          "reported_count_total": null
+        },
+        {
+          "text": "twitched",
+          "model_count": 43,
+          "model_fraction": 0.307143,
+          "reported_count_total": null
+        },
+        {
+          "text": "glanced",
+          "model_count": 42,
+          "model_fraction": 0.3,
+          "reported_count_total": null
+        },
+        {
+          "text": "gloved",
+          "model_count": 42,
+          "model_fraction": 0.3,
+          "reported_count_total": null
+        },
+        {
+          "text": "hesitated",
+          "model_count": 42,
+          "model_fraction": 0.3,
+          "reported_count_total": null
+        },
+        {
+          "text": "containment",
+          "model_count": 41,
+          "model_fraction": 0.292857,
+          "reported_count_total": null
+        },
+        {
+          "text": "creaked",
+          "model_count": 40,
+          "model_fraction": 0.285714,
+          "reported_count_total": null
+        },
+        {
+          "text": "groaned",
+          "model_count": 37,
+          "model_fraction": 0.264286,
+          "reported_count_total": null
+        },
+        {
+          "text": "sternum",
+          "model_count": 37,
+          "model_fraction": 0.264286,
+          "reported_count_total": null
+        },
+        {
+          "text": "exhaled",
+          "model_count": 35,
+          "model_fraction": 0.25,
+          "reported_count_total": null
+        },
+        {
+          "text": "gaze",
+          "model_count": 35,
+          "model_fraction": 0.25,
+          "reported_count_total": null
+        },
+        {
+          "text": "grins",
+          "model_count": 35,
+          "model_fraction": 0.25,
+          "reported_count_total": null
+        },
+        {
+          "text": "voss",
+          "model_count": 35,
+          "model_fraction": 0.25,
+          "reported_count_total": null
+        },
+        {
+          "text": "rasp",
+          "model_count": 33,
+          "model_fraction": 0.235714,
+          "reported_count_total": null
+        },
+        {
+          "text": "crackled",
+          "model_count": 32,
+          "model_fraction": 0.228571,
+          "reported_count_total": null
+        },
+        {
+          "text": "leans",
+          "model_count": 32,
+          "model_fraction": 0.228571,
+          "reported_count_total": null
+        },
+        {
+          "text": "trembling",
+          "model_count": 32,
+          "model_fraction": 0.228571,
+          "reported_count_total": null
+        },
+        {
+          "text": "exhales",
+          "model_count": 31,
+          "model_fraction": 0.221429,
+          "reported_count_total": null
+        },
+        {
+          "text": "clutched",
+          "model_count": 30,
+          "model_fraction": 0.214286,
+          "reported_count_total": null
+        },
+        {
+          "text": "scavenged",
+          "model_count": 30,
+          "model_fraction": 0.214286,
+          "reported_count_total": null
+        },
+        {
+          "text": "snorts",
+          "model_count": 30,
+          "model_fraction": 0.214286,
+          "reported_count_total": null
+        },
+        {
+          "text": "cobblestones",
+          "model_count": 29,
+          "model_fraction": 0.207143,
+          "reported_count_total": null
+        },
+        {
+          "text": "trembled",
+          "model_count": 29,
+          "model_fraction": 0.207143,
+          "reported_count_total": null
+        },
+        {
+          "text": "cloying",
+          "model_count": 28,
+          "model_fraction": 0.2,
+          "reported_count_total": null
+        },
+        {
+          "text": "flinched",
+          "model_count": 28,
+          "model_fraction": 0.2,
+          "reported_count_total": null
+        },
+        {
+          "text": "forearm",
+          "model_count": 28,
+          "model_fraction": 0.2,
+          "reported_count_total": null
+        },
+        {
+          "text": "smirks",
+          "model_count": 28,
+          "model_fraction": 0.2,
+          "reported_count_total": null
+        },
+        {
+          "text": "viewport",
+          "model_count": 28,
+          "model_fraction": 0.2,
+          "reported_count_total": null
+        },
+        {
+          "text": "coiling",
+          "model_count": 27,
+          "model_fraction": 0.192857,
+          "reported_count_total": null
+        },
+        {
+          "text": "hisses",
+          "model_count": 27,
+          "model_fraction": 0.192857,
+          "reported_count_total": null
+        },
+        {
+          "text": "cacophony",
+          "model_count": 26,
+          "model_fraction": 0.185714,
+          "reported_count_total": null
+        },
+        {
+          "text": "calloused",
+          "model_count": 26,
+          "model_fraction": 0.185714,
+          "reported_count_total": null
+        },
+        {
+          "text": "memetic",
+          "model_count": 26,
+          "model_fraction": 0.185714,
+          "reported_count_total": null
+        },
+        {
+          "text": "smelled",
+          "model_count": 26,
+          "model_fraction": 0.185714,
+          "reported_count_total": null
+        },
+        {
+          "text": "crackles",
+          "model_count": 24,
+          "model_fraction": 0.171429,
+          "reported_count_total": null
+        },
+        {
+          "text": "flagstones",
+          "model_count": 24,
+          "model_fraction": 0.171429,
+          "reported_count_total": null
+        },
+        {
+          "text": "stammered",
+          "model_count": 24,
+          "model_fraction": 0.171429,
+          "reported_count_total": null
+        },
+        {
+          "text": "thrum",
+          "model_count": 24,
+          "model_fraction": 0.171429,
+          "reported_count_total": null
+        },
+        {
+          "text": "vibrated",
+          "model_count": 24,
+          "model_fraction": 0.171429,
+          "reported_count_total": null
+        },
+        {
+          "text": "chuckled",
+          "model_count": 23,
+          "model_fraction": 0.164286,
+          "reported_count_total": null
+        },
+        {
+          "text": "coiled",
+          "model_count": 23,
+          "model_fraction": 0.164286,
+          "reported_count_total": null
+        },
+        {
+          "text": "gesturing",
+          "model_count": 23,
+          "model_fraction": 0.164286,
+          "reported_count_total": null
+        },
+        {
+          "text": "glances",
+          "model_count": 23,
+          "model_fraction": 0.164286,
+          "reported_count_total": null
+        },
+        {
+          "text": "hesitates",
+          "model_count": 23,
+          "model_fraction": 0.164286,
+          "reported_count_total": null
+        },
+        {
+          "text": "rusted",
+          "model_count": 23,
+          "model_fraction": 0.164286,
+          "reported_count_total": null
+        },
+        {
+          "text": "shimmered",
+          "model_count": 23,
+          "model_fraction": 0.164286,
+          "reported_count_total": null
+        },
+        {
+          "text": "smudge",
+          "model_count": 23,
+          "model_fraction": 0.164286,
+          "reported_count_total": null
+        },
+        {
+          "text": "stared",
+          "model_count": 23,
+          "model_fraction": 0.164286,
+          "reported_count_total": null
+        },
+        {
+          "text": "mutters",
+          "model_count": 22,
+          "model_fraction": 0.157143,
+          "reported_count_total": null
+        },
+        {
+          "text": "paused",
+          "model_count": 22,
+          "model_fraction": 0.157143,
+          "reported_count_total": null
+        },
+        {
+          "text": "unease",
+          "model_count": 22,
+          "model_fraction": 0.157143,
+          "reported_count_total": null
+        },
+        {
+          "text": "gleamed",
+          "model_count": 21,
+          "model_fraction": 0.15,
+          "reported_count_total": null
+        },
+        {
+          "text": "aris",
+          "model_count": 20,
+          "model_fraction": 0.142857,
+          "reported_count_total": null
+        },
+        {
+          "text": "rasped",
+          "model_count": 20,
+          "model_fraction": 0.142857,
+          "reported_count_total": null
+        },
+        {
+          "text": "clatter",
+          "model_count": 19,
+          "model_fraction": 0.135714,
+          "reported_count_total": null
+        },
+        {
+          "text": "lunged",
+          "model_count": 19,
+          "model_fraction": 0.135714,
+          "reported_count_total": null
+        },
+        {
+          "text": "sighed",
+          "model_count": 19,
+          "model_fraction": 0.135714,
+          "reported_count_total": null
+        },
+        {
+          "text": "stillness",
+          "model_count": 19,
+          "model_fraction": 0.135714,
+          "reported_count_total": null
+        },
+        {
+          "text": "bioluminescent",
+          "model_count": 18,
+          "model_fraction": 0.128571,
+          "reported_count_total": null
+        },
+        {
+          "text": "flicked",
+          "model_count": 18,
+          "model_fraction": 0.128571,
+          "reported_count_total": null
+        },
+        {
+          "text": "foghorn",
+          "model_count": 18,
+          "model_fraction": 0.128571,
+          "reported_count_total": null
+        },
+        {
+          "text": "smirked",
+          "model_count": 18,
+          "model_fraction": 0.128571,
+          "reported_count_total": null
+        },
+        {
+          "text": "eyebrow",
+          "model_count": 17,
+          "model_fraction": 0.121429,
+          "reported_count_total": null
+        },
+        {
+          "text": "forearms",
+          "model_count": 17,
+          "model_fraction": 0.121429,
+          "reported_count_total": null
+        },
+        {
+          "text": "kaelen",
+          "model_count": 17,
+          "model_fraction": 0.121429,
+          "reported_count_total": null
+        },
+        {
+          "text": "darting",
+          "model_count": 16,
+          "model_fraction": 0.114286,
+          "reported_count_total": null
+        },
+        {
+          "text": "mara",
+          "model_count": 16,
+          "model_fraction": 0.114286,
+          "reported_count_total": null
+        },
+        {
+          "text": "shiver",
+          "model_count": 16,
+          "model_fraction": 0.114286,
+          "reported_count_total": null
+        },
+        {
+          "text": "squinted",
+          "model_count": 16,
+          "model_fraction": 0.114286,
+          "reported_count_total": null
+        },
+        {
+          "text": "tremor",
+          "model_count": 16,
+          "model_fraction": 0.114286,
+          "reported_count_total": null
+        },
+        {
+          "text": "unhurried",
+          "model_count": 16,
+          "model_fraction": 0.114286,
+          "reported_count_total": null
+        },
+        {
+          "text": "ached",
+          "model_count": 15,
+          "model_fraction": 0.107143,
+          "reported_count_total": null
+        },
+        {
+          "text": "clinking",
+          "model_count": 15,
+          "model_fraction": 0.107143,
+          "reported_count_total": null
+        },
+        {
+          "text": "prickle",
+          "model_count": 15,
+          "model_fraction": 0.107143,
+          "reported_count_total": null
+        },
+        {
+          "text": "vane",
+          "model_count": 15,
+          "model_fraction": 0.107143,
+          "reported_count_total": null
+        },
+        {
+          "text": "anomalous",
+          "model_count": 14,
+          "model_fraction": 0.1,
+          "reported_count_total": null
+        },
+        {
+          "text": "conspiratorial",
+          "model_count": 14,
+          "model_fraction": 0.1,
+          "reported_count_total": null
+        },
+        {
+          "text": "gleaming",
+          "model_count": 14,
+          "model_fraction": 0.1,
+          "reported_count_total": null
+        },
+        {
+          "text": "humming",
+          "model_count": 14,
+          "model_fraction": 0.1,
+          "reported_count_total": null
+        },
+        {
+          "text": "lingered",
+          "model_count": 14,
+          "model_fraction": 0.1,
+          "reported_count_total": null
+        },
+        {
+          "text": "priya",
+          "model_count": 14,
+          "model_fraction": 0.1,
+          "reported_count_total": null
+        },
+        {
+          "text": "pulsed",
+          "model_count": 14,
+          "model_fraction": 0.1,
+          "reported_count_total": null
+        },
+        {
+          "text": "shelving",
+          "model_count": 14,
+          "model_fraction": 0.1,
+          "reported_count_total": null
+        },
+        {
+          "text": "snorted",
+          "model_count": 14,
+          "model_fraction": 0.1,
+          "reported_count_total": null
+        },
+        {
+          "text": "terran",
+          "model_count": 14,
+          "model_fraction": 0.1,
+          "reported_count_total": null
+        }
+      ],
+      "top_repetitive_phrases": [
+        {
+          "text": "something else entirely",
+          "model_count": 35,
+          "model_fraction": 0.25,
+          "reported_count_total": 182
+        },
+        {
+          "text": "one last time",
+          "model_count": 33,
+          "model_fraction": 0.235714,
+          "reported_count_total": 156
+        },
+        {
+          "text": "something else, something",
+          "model_count": 33,
+          "model_fraction": 0.235714,
+          "reported_count_total": 187
+        },
+        {
+          "text": "took a deep breath",
+          "model_count": 33,
+          "model_fraction": 0.235714,
+          "reported_count_total": 481
+        },
+        {
+          "text": "voice barely a whisper",
+          "model_count": 31,
+          "model_fraction": 0.221429,
+          "reported_count_total": 310
+        },
+        {
+          "text": "voice barely above a whisper",
+          "model_count": 30,
+          "model_fraction": 0.214286,
+          "reported_count_total": 500
+        },
+        {
+          "text": "said, his voice low",
+          "model_count": 28,
+          "model_fraction": 0.2,
+          "reported_count_total": 207
+        },
+        {
+          "text": "air was thick with the scent",
+          "model_count": 27,
+          "model_fraction": 0.192857,
+          "reported_count_total": 158
+        },
+        {
+          "text": "take a deep breath",
+          "model_count": 27,
+          "model_fraction": 0.192857,
+          "reported_count_total": 420
+        },
+        {
+          "text": "voice barely audible",
+          "model_count": 27,
+          "model_fraction": 0.192857,
+          "reported_count_total": 254
+        },
+        {
+          "text": "eyes never leaving",
+          "model_count": 22,
+          "model_fraction": 0.157143,
+          "reported_count_total": 403
+        },
+        {
+          "text": "couldn't shake the feeling",
+          "model_count": 20,
+          "model_fraction": 0.142857,
+          "reported_count_total": 331
+        },
+        {
+          "text": "first time since",
+          "model_count": 20,
+          "model_fraction": 0.142857,
+          "reported_count_total": 79
+        },
+        {
+          "text": "casting long shadows",
+          "model_count": 19,
+          "model_fraction": 0.135714,
+          "reported_count_total": 134
+        },
+        {
+          "text": "smile playing on his lips",
+          "model_count": 19,
+          "model_fraction": 0.135714,
+          "reported_count_total": 134
+        },
+        {
+          "text": "like a physical blow",
+          "model_count": 17,
+          "model_fraction": 0.121429,
+          "reported_count_total": 83
+        },
+        {
+          "text": "voice steady despite",
+          "model_count": 17,
+          "model_fraction": 0.121429,
+          "reported_count_total": 184
+        },
+        {
+          "text": "first time in a long",
+          "model_count": 16,
+          "model_fraction": 0.114286,
+          "reported_count_total": 86
+        },
+        {
+          "text": "said, his voice dropping",
+          "model_count": 16,
+          "model_fraction": 0.114286,
+          "reported_count_total": 83
+        },
+        {
+          "text": "heart hammering against her ribs",
+          "model_count": 15,
+          "model_fraction": 0.107143,
+          "reported_count_total": 48
+        },
+        {
+          "text": "like a trapped bird",
+          "model_count": 15,
+          "model_fraction": 0.107143,
+          "reported_count_total": 116
+        },
+        {
+          "text": "said, her voice low",
+          "model_count": 15,
+          "model_fraction": 0.107143,
+          "reported_count_total": 73
+        },
+        {
+          "text": "said, his voice a low",
+          "model_count": 15,
+          "model_fraction": 0.107143,
+          "reported_count_total": 86
+        },
+        {
+          "text": "smile playing on her lips",
+          "model_count": 15,
+          "model_fraction": 0.107143,
+          "reported_count_total": 86
+        },
+        {
+          "text": "ribs like a trapped",
+          "model_count": 14,
+          "model_fraction": 0.1,
+          "reported_count_total": 106
+        },
+        {
+          "text": "voice dropping an octave",
+          "model_count": 14,
+          "model_fraction": 0.1,
+          "reported_count_total": 151
+        }
+      ],
+      "top_bigrams": [
+        {
+          "text": "says voice",
+          "model_count": 76,
+          "model_fraction": 0.542857,
+          "reported_count_total": 1569
+        },
+        {
+          "text": "last week",
+          "model_count": 62,
+          "model_fraction": 0.442857,
+          "reported_count_total": 706
+        },
+        {
+          "text": "one hand",
+          "model_count": 54,
+          "model_fraction": 0.385714,
+          "reported_count_total": 763
+        },
+        {
+          "text": "like something",
+          "model_count": 51,
+          "model_fraction": 0.364286,
+          "reported_count_total": 637
+        },
+        {
+          "text": "gon na",
+          "model_count": 50,
+          "model_fraction": 0.357143,
+          "reported_count_total": 666
+        },
+        {
+          "text": "voice dropping",
+          "model_count": 45,
+          "model_fraction": 0.321429,
+          "reported_count_total": 657
+        },
+        {
+          "text": "air thick",
+          "model_count": 44,
+          "model_fraction": 0.314286,
+          "reported_count_total": 900
+        },
+        {
+          "text": "like someone",
+          "model_count": 44,
+          "model_fraction": 0.314286,
+          "reported_count_total": 629
+        },
+        {
+          "text": "smells like",
+          "model_count": 43,
+          "model_fraction": 0.307143,
+          "reported_count_total": 584
+        },
+        {
+          "text": "tilts head",
+          "model_count": 41,
+          "model_fraction": 0.292857,
+          "reported_count_total": 468
+        },
+        {
+          "text": "feels like",
+          "model_count": 39,
+          "model_fraction": 0.278571,
+          "reported_count_total": 608
+        },
+        {
+          "text": "said nothing",
+          "model_count": 38,
+          "model_fraction": 0.271429,
+          "reported_count_total": 394
+        },
+        {
+          "text": "say voice",
+          "model_count": 36,
+          "model_fraction": 0.257143,
+          "reported_count_total": 446
+        },
+        {
+          "text": "got ta",
+          "model_count": 34,
+          "model_fraction": 0.242857,
+          "reported_count_total": 306
+        },
+        {
+          "text": "like man",
+          "model_count": 33,
+          "model_fraction": 0.235714,
+          "reported_count_total": 394
+        },
+        {
+          "text": "one thing",
+          "model_count": 33,
+          "model_fraction": 0.235714,
+          "reported_count_total": 325
+        },
+        {
+          "text": "voice barely",
+          "model_count": 33,
+          "model_fraction": 0.235714,
+          "reported_count_total": 967
+        },
+        {
+          "text": "last night",
+          "model_count": 31,
+          "model_fraction": 0.221429,
+          "reported_count_total": 315
+        },
+        {
+          "text": "barely whisper",
+          "model_count": 30,
+          "model_fraction": 0.214286,
+          "reported_count_total": 714
+        },
+        {
+          "text": "thick scent",
+          "model_count": 29,
+          "model_fraction": 0.207143,
+          "reported_count_total": 380
+        },
+        {
+          "text": "reach eyes",
+          "model_count": 28,
+          "model_fraction": 0.2,
+          "reported_count_total": 231
+        },
+        {
+          "text": "casting long",
+          "model_count": 27,
+          "model_fraction": 0.192857,
+          "reported_count_total": 291
+        },
+        {
+          "text": "heart hammering",
+          "model_count": 26,
+          "model_fraction": 0.185714,
+          "reported_count_total": 330
+        },
+        {
+          "text": "metallic tang",
+          "model_count": 24,
+          "model_fraction": 0.171429,
+          "reported_count_total": 279
+        },
+        {
+          "text": "phone buzzes",
+          "model_count": 24,
+          "model_fraction": 0.171429,
+          "reported_count_total": 187
+        },
+        {
+          "text": "shadows across",
+          "model_count": 24,
+          "model_fraction": 0.171429,
+          "reported_count_total": 216
+        },
+        {
+          "text": "flicker something",
+          "model_count": 22,
+          "model_fraction": 0.157143,
+          "reported_count_total": 374
+        },
+        {
+          "text": "steps closer",
+          "model_count": 22,
+          "model_fraction": 0.157143,
+          "reported_count_total": 199
+        },
+        {
+          "text": "playing lips",
+          "model_count": 21,
+          "model_fraction": 0.15,
+          "reported_count_total": 312
+        },
+        {
+          "text": "someone else",
+          "model_count": 21,
+          "model_fraction": 0.15,
+          "reported_count_total": 242
+        },
+        {
+          "text": "voice low",
+          "model_count": 21,
+          "model_fraction": 0.15,
+          "reported_count_total": 492
+        },
+        {
+          "text": "everyone else",
+          "model_count": 20,
+          "model_fraction": 0.142857,
+          "reported_count_total": 193
+        },
+        {
+          "text": "fingers brushing",
+          "model_count": 19,
+          "model_fraction": 0.135714,
+          "reported_count_total": 174
+        },
+        {
+          "text": "said something",
+          "model_count": 19,
+          "model_fraction": 0.135714,
+          "reported_count_total": 160
+        },
+        {
+          "text": "voice steady",
+          "model_count": 19,
+          "model_fraction": 0.135714,
+          "reported_count_total": 502
+        },
+        {
+          "text": "expression unreadable",
+          "model_count": 18,
+          "model_fraction": 0.128571,
+          "reported_count_total": 248
+        },
+        {
+          "text": "internal monologue",
+          "model_count": 18,
+          "model_fraction": 0.128571,
+          "reported_count_total": 199
+        },
+        {
+          "text": "one one",
+          "model_count": 18,
+          "model_fraction": 0.128571,
+          "reported_count_total": 185
+        },
+        {
+          "text": "shake feeling",
+          "model_count": 18,
+          "model_fraction": 0.128571,
+          "reported_count_total": 437
+        },
+        {
+          "text": "stark contrast",
+          "model_count": 18,
+          "model_fraction": 0.128571,
+          "reported_count_total": 330
+        },
+        {
+          "text": "eyes narrow",
+          "model_count": 17,
+          "model_fraction": 0.121429,
+          "reported_count_total": 178
+        },
+        {
+          "text": "eyes scanning",
+          "model_count": 17,
+          "model_fraction": 0.121429,
+          "reported_count_total": 381
+        },
+        {
+          "text": "hammering ribs",
+          "model_count": 17,
+          "model_fraction": 0.121429,
+          "reported_count_total": 175
+        },
+        {
+          "text": "left foot",
+          "model_count": 17,
+          "model_fraction": 0.121429,
+          "reported_count_total": 317
+        },
+        {
+          "text": "right foot",
+          "model_count": 17,
+          "model_fraction": 0.121429,
+          "reported_count_total": 315
+        },
+        {
+          "text": "right arm",
+          "model_count": 16,
+          "model_fraction": 0.114286,
+          "reported_count_total": 187
+        },
+        {
+          "text": "slow deliberate",
+          "model_count": 16,
+          "model_fraction": 0.114286,
+          "reported_count_total": 166
+        },
+        {
+          "text": "last month",
+          "model_count": 14,
+          "model_fraction": 0.1,
+          "reported_count_total": 123
+        },
+        {
+          "text": "like dying",
+          "model_count": 14,
+          "model_fraction": 0.1,
+          "reported_count_total": 130
+        }
+      ],
+      "top_trigrams": [
+        {
+          "text": "said voice low",
+          "model_count": 61,
+          "model_fraction": 0.435714,
+          "reported_count_total": 724
+        },
+        {
+          "text": "voice barely whisper",
+          "model_count": 54,
+          "model_fraction": 0.385714,
+          "reported_count_total": 907
+        },
+        {
+          "text": "something else something",
+          "model_count": 45,
+          "model_fraction": 0.321429,
+          "reported_count_total": 344
+        },
+        {
+          "text": "air thick scent",
+          "model_count": 36,
+          "model_fraction": 0.257143,
+          "reported_count_total": 328
+        },
+        {
+          "text": "something else entirely",
+          "model_count": 34,
+          "model_fraction": 0.242857,
+          "reported_count_total": 183
+        },
+        {
+          "text": "one last time",
+          "model_count": 32,
+          "model_fraction": 0.228571,
+          "reported_count_total": 156
+        },
+        {
+          "text": "took deep breath",
+          "model_count": 32,
+          "model_fraction": 0.228571,
+          "reported_count_total": 478
+        },
+        {
+          "text": "smile playing lips",
+          "model_count": 31,
+          "model_fraction": 0.221429,
+          "reported_count_total": 302
+        },
+        {
+          "text": "heart hammering ribs",
+          "model_count": 28,
+          "model_fraction": 0.2,
+          "reported_count_total": 219
+        },
+        {
+          "text": "take deep breath",
+          "model_count": 26,
+          "model_fraction": 0.185714,
+          "reported_count_total": 423
+        },
+        {
+          "text": "says voice low",
+          "model_count": 25,
+          "model_fraction": 0.178571,
+          "reported_count_total": 177
+        },
+        {
+          "text": "voice barely audible",
+          "model_count": 25,
+          "model_fraction": 0.178571,
+          "reported_count_total": 259
+        },
+        {
+          "text": "heart hammered ribs",
+          "model_count": 23,
+          "model_fraction": 0.164286,
+          "reported_count_total": 145
+        },
+        {
+          "text": "said voice barely",
+          "model_count": 23,
+          "model_fraction": 0.164286,
+          "reported_count_total": 257
+        },
+        {
+          "text": "close enough smell",
+          "model_count": 21,
+          "model_fraction": 0.15,
+          "reported_count_total": 104
+        },
+        {
+          "text": "eyes never leaving",
+          "model_count": 21,
+          "model_fraction": 0.15,
+          "reported_count_total": 401
+        },
+        {
+          "text": "close enough could",
+          "model_count": 20,
+          "model_fraction": 0.142857,
+          "reported_count_total": 85
+        },
+        {
+          "text": "first time since",
+          "model_count": 20,
+          "model_fraction": 0.142857,
+          "reported_count_total": 79
+        },
+        {
+          "text": "casting long shadows",
+          "model_count": 19,
+          "model_fraction": 0.135714,
+          "reported_count_total": 136
+        },
+        {
+          "text": "could shake feeling",
+          "model_count": 19,
+          "model_fraction": 0.135714,
+          "reported_count_total": 328
+        },
+        {
+          "text": "said voice steady",
+          "model_count": 19,
+          "model_fraction": 0.135714,
+          "reported_count_total": 191
+        },
+        {
+          "text": "smile reach eyes",
+          "model_count": 17,
+          "model_fraction": 0.121429,
+          "reported_count_total": 77
+        },
+        {
+          "text": "voice steady despite",
+          "model_count": 17,
+          "model_fraction": 0.121429,
+          "reported_count_total": 184
+        },
+        {
+          "text": "close enough see",
+          "model_count": 16,
+          "model_fraction": 0.114286,
+          "reported_count_total": 68
+        },
+        {
+          "text": "said voice dropping",
+          "model_count": 16,
+          "model_fraction": 0.114286,
+          "reported_count_total": 135
+        },
+        {
+          "text": "spreading across face",
+          "model_count": 16,
+          "model_fraction": 0.114286,
+          "reported_count_total": 94
+        },
+        {
+          "text": "like trapped bird",
+          "model_count": 15,
+          "model_fraction": 0.107143,
+          "reported_count_total": 117
+        },
+        {
+          "text": "heart pounding chest",
+          "model_count": 14,
+          "model_fraction": 0.1,
+          "reported_count_total": 304
+        },
+        {
+          "text": "ribs like trapped",
+          "model_count": 14,
+          "model_fraction": 0.1,
+          "reported_count_total": 106
+        },
+        {
+          "text": "voice low rumble",
+          "model_count": 14,
+          "model_fraction": 0.1,
+          "reported_count_total": 91
+        }
+      ]
+    }
+  }
 }

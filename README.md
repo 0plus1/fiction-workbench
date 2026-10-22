@@ -212,3 +212,40 @@ Run the downloader's offline regression checks with:
 ```sh
 uv run --no-project python -m unittest -v test_download_eqbench_slop.py
 ```
+
+### Rebuild the bundled ban list
+
+The committed [`constraint-profile.json`](skills/fiction-workbench/references/constraint-profile.json)
+is generated from the downloaded profiles with a second root-level development utility:
+
+```sh
+uv run download_eqbench_slop.py
+uv run generate_constraint_profile.py
+```
+
+The generator reads every model listed in the download manifest. An entry qualifies
+if at least **10% of models** list it in any one of the four source categories.
+Each model gets one vote for an entry, even if its profile contains several case
+variants. Reported occurrence counts are retained as evidence and do not determine
+selection, so models with longer outputs do not get extra voting weight.
+
+Case, apostrophe style and whitespace are normalised; punctuation and EQBench's
+ngram wording are preserved. Selected entries from all four categories are merged
+into a deduplicated `hard` ban list; `review` is empty. Category evidence records
+model prevalence and available occurrence totals. The JSON also includes the source,
+threshold and input fingerprint. There are no manual exclusions or added inflections.
+The profile is used for requested constrained drafting.
+
+The profile and generator belong in Git; `slop_profiles/` remains gitignored.
+Regenerating from the same inputs and settings produces identical bytes. To use
+a different threshold or preview a separate file:
+
+```sh
+uv run generate_constraint_profile.py --min-model-fraction 0.2 --output /tmp/constraint-profile.json
+```
+
+Run both utilities' offline checks with:
+
+```sh
+uv run --no-project python -m unittest -v test_download_eqbench_slop.py test_generate_constraint_profile.py
+```

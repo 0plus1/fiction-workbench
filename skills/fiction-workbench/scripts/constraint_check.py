@@ -9,8 +9,12 @@ from repetition_scan import prose_paragraphs
 
 def load_profile(path):
     data = json.loads(path.read_text(encoding='utf-8'))
-    if not isinstance(data, dict) or set(data) != {'name', 'hard', 'review'}:
-        raise ValueError('Profile must contain exactly name, hard and review.')
+    required = {'name', 'hard', 'review'}
+    if (not isinstance(data, dict) or not required <= set(data)
+            or set(data) - required - {'metadata'}):
+        raise ValueError('Profile must contain name, hard and review, with optional metadata.')
+    if 'metadata' in data and not isinstance(data['metadata'], dict):
+        raise ValueError('Profile metadata must be an object.')
     if not isinstance(data['name'], str) or not data['name'].strip():
         raise ValueError('Profile name must be a nonempty string.')
     seen = set()
