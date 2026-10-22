@@ -164,3 +164,51 @@ If your project uses different folder names or want different rewrite rules, edi
 - [`skills/fiction-workbench/SKILL.md`](skills/fiction-workbench/SKILL.md)
 
 Keep the skills procedural. Put story-specific canon in your own project, not inside the public skill repo.
+
+## Download EQBench slop profiles
+
+The root-level development utility [`download_eqbench_slop.py`](download_eqbench_slop.py)
+downloads every model's slop profile from the
+[EQBench Creative Writing v3 leaderboard](https://eqbench.com/creative_writing.html).
+It is separate from the installed fiction skill. Run it with [uv](https://docs.astral.sh/uv/):
+
+```sh
+uv run download_eqbench_slop.py
+```
+
+No third-party Python packages are required. The default destination is the
+gitignored `slop_profiles/` folder at the repository root. To choose another location:
+
+```sh
+uv run download_eqbench_slop.py --output-dir /path/to/profiles
+```
+
+The downloader reads the current `creative_writing.js` URL from the page, including
+its version query, and extracts the embedded `slopData` profiles without executing
+JavaScript. It checks that every leaderboard model has all four sections before
+writing any output. Unexpected upstream formats produce an error.
+
+Each model gets a JSON file containing `model_name` and these ordered lists:
+
+- `top_repetitive_words`
+- `top_repetitive_phrases`
+- `top_bigrams`
+- `top_trigrams`
+
+List entries have `text` and `count`. Counts are copied from EQBench's displayed
+values; words use `null` because the page supplies no word counts. Case, punctuation,
+names, and list order are preserved, with HTML entities decoded. Empty upstream
+lists remain empty. The downloader does not expand, stem, or reinterpret n-grams.
+
+Every JSON records the source page, discovered and resolved data URLs, retrieval
+time in UTC, and the SHA-256 hash of the downloaded JavaScript. `manifest.json`
+maps model identifiers to filenames and records the model count and source.
+Rerunning refreshes the profiles and removes obsolete files listed in the previous
+manifest; unrelated files are preserved. These are benchmark repetition observations,
+not a universal blacklist or the separate Slop Score master list.
+
+Run the downloader's offline regression checks with:
+
+```sh
+uv run --no-project python -m unittest -v test_download_eqbench_slop.py
+```
