@@ -1,160 +1,64 @@
 ---
 name: fiction-workbench
-description: Canon-aware drafting, comment-driven rewriting, deterministic linting, line editing, critique, anti-slop cleanup, and continuity sealing for long-form fiction projects organized around chapter files plus a story bible. Use when working on a specific scene or chapter and needing to preserve voice, chronology, character integrity, motifs, narrative direction, apply inline rewrite comments, lint for prose tells, or remove generic AI-shaped prose.
-argument-hint: <write|write-comments|lint|edit|critique|seal> <chapter-file>
+description: Develop, draft, critique, and revise literary fiction against an author's approved voice and story canon, with focused dialogue, scene, and repetition reviews. Use for manuscript work and story development, including ordinary inline comments.
+argument-hint: <develop|write|write-comments|edit|critique|lint|seal|experiment> [target]
 disable-model-invocation: true
 ---
 
-Treat the human as the author. Your job is to reduce drift, preserve intent, and improve discipline across a long-form fiction project.
+# Fiction Workbench
 
-Parse the invocation arguments like this:
+Help the author make scenes worth reading. Elegant sentences cannot rescue interchangeable people, an inert conversation, or an incoherent event. Treat the author's taste as the calibration target; a clean lint report is not literary success.
 
-- Mode: `$0`
-- Target chapter or scene file: `$1`
+## Scope and authority
 
-If either is missing, ask one short clarifying question and stop.
-If the mode is not `write`, `write-comments`, `lint`, `edit`, `critique`, or `seal`, explain the valid modes briefly and stop.
+Infer mode and target from ordinary language and visible project context. Do not demand command syntax. Ask only for missing information that changes the intended work. A discussion stays a discussion unless saving or editing is requested or already authorised. Do not turn a scene experiment into a manuscript rewrite.
 
-## Workflow
+Precedence:
 
-1. Read the target file first.
-2. For `write`, `write-comments`, `lint`, `edit`, or `critique`, read the bundled anti-slop references when available:
-   - `references/style_guide.md`
-   - `references/forbidden_patterns.md`
-   - `references/lint_layers.md`
-3. Use this project structure when the files exist:
-   - `bible/characters/`
-   - `bible/locations/`
-   - `bible/themes/`
-   - `bible/emotional-arc.md`
-   - `bible/style-guide.md`
-   - `bible/narrative-spine.md`
-   - `manuscript/chapters/`
-4. Read `bible/style-guide.md`, `bible/narrative-spine.md`, and `bible/emotional-arc.md` when they exist.
-5. Treat `bible/style-guide.md` as project-specific authority over the bundled anti-slop defaults.
-6. Read only the character, location, and theme files that are clearly relevant to the target chapter or scene.
-7. Read adjacent chapter files only when continuity, chronology, or payoff depends on them.
-8. Work from the text that exists. Do not invent canon, backstory, or symbolism that the files do not support.
+1. Current author direction, including corrections and the requested scope.
+2. Approved prose for voice; current story decisions for facts. These are different authorities.
+3. Project guidance and the relevant target passage.
+4. This skill's diagnostic suggestions.
 
-## Global Rules
+Read the target and any comments. Before prose work, read the designated voice reference **and its source passages**, even when continuity is clear. Resolve case variants such as `Style-Guide.md`. Consult the narrative spine, emotional arc and relevant character/location records as needed; do not load unrelated books. Old drafts labelled superseded do not govern a new plot.
 
-- Preserve established voice, chronology, and character integrity.
-- Preserve the project’s existing spelling and punctuation conventions.
-- Preserve point of view, tense, and markdown structure unless the user asks for a change.
-- Prefer concrete, grounded prose over abstract explanation.
-- Remove generic AI phrasing, theatrical dialogue, and empty literary flourish.
-- Apply the bundled style guide and forbidden-pattern checks conservatively; density and recurrence matter more than isolated accidents.
-- Do not introduce new lore, backstory, motifs, or symbolic systems unless the source material supports them.
-- Do not flatten deliberate ambiguity or overexplain subtext.
-- Prefer the smallest amount of canon lookup needed to do the job well.
-- Do not overload the prose generation prompt with every lint rule. Draft or revise for the scene first, then run deterministic lint as a separate catch pass.
-- Keep output aligned with the mode requested.
+Preserve authorised boundaries, POV, tense, language conventions and consequential history. Invent ordinary scene particulars—tasks, interruptions, interests, mistakes, conversation—when needed for an authorised draft. Distinguish them from changes to family history, major events, world rules or chronology. Ask about a consequential unresolved fact; do not ask permission for each incidental detail.
 
-## Mode: `write`
+## Drafting and substantial revision
 
-Use this mode to draft, expand, or rewrite the target chapter or scene.
+Read [scene and prose guidance](references/style_guide.md). For sustained dialogue, also read [dialogue](references/dialogue.md). Load the [pattern watchlist](references/forbidden_patterns.md) during revision, rather than drafting under a wall of prohibitions. For requested word/phrase bans or an antislop-sampler experiment, use [constrained drafting](references/constrained-drafting.md): an explicit profile, deterministic check and bounded passage retries. These constraints govern acceptance of generated prose; they do not control token probabilities.
 
-- Apply the style guidance and narrative constraints from the project bible.
-- Preserve the intended events, relationships, and emotional direction unless the user asks for structural changes.
-- Strengthen pacing, scene grounding, and sensory specificity.
-- Resolve local awkwardness, but do not quietly change story logic or scene outcomes.
-- Do a final anti-slop pass for repeated rhetorical scaffolds, generic suspense, staged fragments, and narrator intrusions.
-- End with forward movement or meaningful narrative pressure.
-- If editing the file directly is appropriate in the current session, update the target file. Otherwise return the revised draft only.
+Before writing, identify briefly in working notes:
 
-Output:
+- What is happening here, what each person knows, and what each wants from the immediate encounter.
+- Why this particular moment deserves scene time; pleasure, companionship and discovery can be sufficient.
+- What changes by the end: a practical situation, an understanding, attention or a relationship. A twist or showdown is not required.
 
-- Revised draft only, unless the user explicitly asks for commentary.
+Use this to orient the scene, not as a compulsory three-part structure in the prose. Profiles constrain behaviour; they are not lines of dialogue. Someone besides the protagonist needs an interest beyond explaining him.
 
-## Mode: `write-comments`
+When the scene feels generic, consider a materially different action, conversational subject or consequence. Select for these people in this situation. Rewording the same empty exchange will not supply invention. Do not add an eccentric prop or a surprise merely to appear creative.
 
-Use this mode when the target is an annotated fiction draft with marked spans and a matching `### COMMENTS` section. Treat it as a targeted `write` pass driven by explicit local instructions.
+Draft in connected passages. Use the paragraph-movement review in the prose guidance: check what carries attention across sentence boundaries, which details deserve emphasis, and where narration repeatedly restarts. Apply it to the opening and a sustained narrative passage before delivering a new scene; reading the guidance alone does not complete this check. Preserve permission to summarise travel or repeated routines and to state an emotion plainly when that is exact. Give consequential encounters sufficient scene time. Do not replace all interpretation with bodily movement.
 
-- Confirm that the target draft uses marked spans in this form:
-  - `<<C1 START>> ... <<C1 END>>`
-  - matching entries in a `### COMMENTS` section such as `[C1] ...`
-- Verify that every marked span has exactly one matching comment entry and that there are no orphaned comment IDs.
-- If the format is broken or the IDs do not match one-to-one, explain the mismatch briefly and stop.
-- Use each comment entry as the rewrite instruction for its matching marked span.
-- Preserve story intent, continuity, and key plot beats unless a comment explicitly asks for a change.
-- Preserve point of view, tense, chronology, and markdown structure unless a comment explicitly requires a local change.
-- Improve prose clarity, subtext, sensory detail, rhythm, and anti-slop cleanliness where appropriate.
-- Keep unmarked sections aligned with the existing voice. Do not rewrite them broadly just because nearby text changes.
-- Expand beyond the marked span only when a comment clearly requires a small local bridge for coherence.
-- Remove the marker tags from the final output.
-- Do not include the `### COMMENTS` section in the final output.
+Review in this order, at a scale appropriate to the request:
 
-Output:
+1. **Scene and coherence:** track location, time, objects, knowledge and reasons for actions. Repair accidental contradictions and missing causal steps. Keep deliberate uncertainty about meaning or the supernatural separate from confusing physical staging.
+2. **People and conversation:** follow each speaker's response to what was actually said. Check attraction, pleasure or conflict in both directions. Read the dialogue once without action beats; then restore only beats that affect the exchange or provide necessary orientation.
+3. **Narration and form:** compare a sustained passage with the approved voice and any author-rejected examples. Check developing thought, paragraph endings, repeated rhythms and the distribution of attention. Repair the demonstrated failure at paragraph scale, preserving useful short sentences; do not treat added conjunctions or longer sentences as evidence that the problem is solved. Use the pattern watchlist for suspicious clusters, not lexical obedience.
 
-- Rewritten draft only, unless the user explicitly asks for notes.
+A rewrite must improve the scene or voice. Keep the original when the replacement is merely tidier, more literal, more restrained or less frequent in a word count. Prefer one targeted revision of an observed weakness over repeated polishing. Re-read the affected passage for coherence after revising. Stop when no concrete improvement remains; do not claim perfection.
 
-## Mode: `lint`
+Do not force an aphorism, ominous hint or hook at the end of a quiet scene. Do not append an explanation of what the reader should have felt.
 
-Use this mode to catch anti-slop and style issues without rewriting.
+## Modes
 
-- Run Layer 1 and Layer 2 checks from `references/lint_layers.md` first.
-- Report only high-confidence matches with rule ID, line number, matched text, and suggested fix direction.
-- Treat caps as signals, not proof. Flag clusters and overuse before isolated punctuation.
-- Do not rewrite the chapter unless the user explicitly asks for a fix pass.
-- If Layer 1 and Layer 2 are stable and the user asks for deeper review, run Layer 3 as separate lenses: style, character, plot, and continuity.
-- Keep each semantic lens focused on one chapter and its relevant bible files.
+- **develop:** discuss possibilities, distinguish author choices from proposals, update planning files only within the requested scope. Do not silently canonise every example.
+- **write:** draft or substantially rewrite the authorised scene/chapter. Use comments as guidance across the requested scope, including a whole-chapter rewrite when asked.
+- **write-comments:** make local changes around ordinary prose comments, `/** ... **/`, HTML annotations, or formally mapped spans. Associate informal comments with the smallest coherent passage. Validate IDs only when the author uses formal mapped spans; do not reject other annotation formats. Remove resolved annotations, retain unresolved ones with an explanation. Preserve surrounding prose unless the requested change requires a bridge.
+- **edit:** improve lines conservatively. No new consequential events or rewritten emotional arc. Fixing a typo does not license recasting the paragraph.
+- **critique:** describe the reader effect, cite the passage, and diagnose the underlying scene/voice problem. Prioritise a few consequential findings; do not produce a checklist of hypothetical defects. Do not rewrite without author direction.
+- **lint:** follow [review layers](references/lint_layers.md). Distinguish mechanical observations from editorial judgements. No automatic rewriting or pass/fail verdict on prose quality.
+- **seal:** derive factual summary, POV state, motifs, open threads and drift warnings from the actual finished prose. Never seal planned events as though written. Save only where requested or already authorised.
+- **experiment:** use [evaluation](references/evaluation.md) for a short controlled comparison. Keep candidate prose outside the manuscript until selected. Variants should differ in an editorial decision, not just wording.
 
-Output headings:
-
-- `Surface lint`
-- `Structural lint`
-- `Semantic review candidates`
-- `Highest-value fixes`
-
-## Mode: `edit`
-
-Use this mode for line-level refinement without changing story intent.
-
-- Improve rhythm, clarity, precision, and flow.
-- Cut repetition, stiffness, and overwritten phrasing.
-- Preserve meaning, scene order, and voice.
-- Avoid adding new beats, new lore, or new motivations.
-- Remove forbidden patterns and bad cadence habits without replacing them with equally canned phrasing.
-- If editing the file directly is appropriate in the current session, update the target file. Otherwise return the edited text only.
-
-Output:
-
-- Edited version only, unless the user explicitly asks for notes.
-
-## Mode: `critique`
-
-Use this mode for literary and structural feedback only.
-
-- Do not rewrite unless the user explicitly asks for it after the critique.
-- Evaluate voice consistency.
-- Evaluate character integrity.
-- Evaluate pacing and scene balance.
-- Evaluate thematic alignment with `bible/narrative-spine.md`.
-- Identify canon drift, false notes, artificial phrasing, forbidden patterns, and missed grounding opportunities.
-- Cite concrete problem spots when possible.
-- Be specific and direct.
-
-Output headings:
-
-- `What is working`
-- `What feels false or weak`
-- `What drifted from canon`
-- `What to strengthen next`
-
-## Mode: `seal`
-
-Use this mode when a chapter is finished and needs continuity notes.
-
-Generate these sections:
-
-1. `Summary`: roughly 150 to 250 words
-2. `POV State`: the primary point-of-view character's emotional position at the end of the chapter
-3. `Motifs`: recurring images, symbols, or phrases actually used in the chapter
-4. `Open Threads`: unresolved tensions, promises, or continuity hooks carried forward
-5. `Drift Warnings`: continuity risks, canon pressure points, or details likely to cause later contradiction
-
-Output rules:
-
-- Keep it factual and compact.
-- Do not invent future events.
-- Return notes in chat unless the user explicitly asks you to write them into a continuity file.
+For drafting, give the requested prose without an unsolicited essay. When reporting file edits, name the material change and any unresolved continuity issue. For critique or experiments, include the reasoning the author needs to compare choices. Do not present private working notes as a mandatory preamble.

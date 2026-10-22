@@ -1,4 +1,4 @@
 interface:
   display_name: "Fiction Workbench"
-  short_description: "Canon-aware fiction writing and editing"
-  default_prompt: "Use $fiction-workbench write-comments manuscript/chapters/chapter-12-comments.md to apply the marked rewrite comments against the project bible."
+  short_description: "Voice-led fiction, scenes, dialogue and revision"
+  default_prompt: "Use $fiction-workbench to revise the current scene against the approved voice, improving dialogue and removing redundant explanation while preserving its story facts."
